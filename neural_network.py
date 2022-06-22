@@ -20,7 +20,7 @@ model.add(Dropout(0.6))
 model.add(Dropout(0.6))
 model.add(Dense(1))
 
-model.compile(loss="mse",optimizer="ftrl")
+model.compile(loss="mse",optimizer="adam")
 model.fit(x=X_train,y=y_train,epochs=5,batch_size=64,validation_data=(X_valid,y_valid),verbose=1)
 
 
@@ -31,5 +31,4 @@ prediction_array=model.predict(X_test)
 
 print("ERROR VALUE:",mean_absolute_error(y_test,prediction_array)*0.01)
 print("SCORE ON THE TEST SET:",model.evaluate(X_test,y_test))
-# print(model.predict(X_test))
-# print(prediction_array)
+

@@ -6,7 +6,7 @@ import urllib.request
 import os
 
 def get_data(folder_name="dataset", file_name="dataset.zip"):
-    url = "https://drive.google.com/file/d/1F-1jchSoW3KzZyC4v6zWT9FfC6FQM2UY/view?usp=sharing"
+    url = "https://github.com/AsadsGit/CreditScorePrediction/raw/main/archive.zip"
     path = os.path.join(folder_name, file_name)
 
     if not os.path.isdir(folder_name):
